@@ -33,21 +33,12 @@ class ViewController: UIViewController ,SFSpeechRecognitionTaskDelegate{
         recordButton.isEnabled = false
         }
     
-    public func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
-        if available {
-            // 利用可能になったら、録音ボタンを有効にする
-            recordButton.isEnabled = true
-            recordButton.setTitle("Start Recording", for: [])
-            recordButton.backgroundColor = UIColor.blue
-        } else {
-            // 利用できないなら、録音ボタンは無効にする
-            recordButton.isEnabled = false
-            recordButton.setTitle("現在、使用不可", for: .disabled)
-        }
-    }
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        speechRecognizer.delegate = self as? SFSpeechRecognizerDelegate // デリゲート先になる
         
         SFSpeechRecognizer.requestAuthorization { (status) in
             OperationQueue.main.addOperation {
@@ -68,11 +59,19 @@ class ViewController: UIViewController ,SFSpeechRecognitionTaskDelegate{
             }
         }
         
-        
-        speechRecognizer.delegate = self as? SFSpeechRecognizerDelegate // デリゲート先になる
-        
-        
-
+    }
+    
+    public func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
+        if available {
+            // 利用可能になったら、録音ボタンを有効にする
+            recordButton.isEnabled = true
+            recordButton.setTitle("Start Recording", for: [])
+            recordButton.backgroundColor = UIColor.blue
+        } else {
+            // 利用できないなら、録音ボタンは無効にする
+            recordButton.isEnabled = false
+            recordButton.setTitle("現在、使用不可", for: .disabled)
+        }
     }
     
     

@@ -38,6 +38,8 @@
 	<string>このアプリは音声認識機能を使用します</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>このアプリはマイクを使用します</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>わー</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
