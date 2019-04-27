@@ -18,20 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="evg-Bk-S76">
-                                <rect key="frame" x="54" y="61" width="276" height="230"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="evg-Bk-S76">
+                                <rect key="frame" x="37.5" y="52" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Pj8-Pq-bj8"/>
+                                    <constraint firstAttribute="height" constant="300" id="Srg-GV-KiU"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnn-w8-rnC">
-                                <rect key="frame" x="121" y="503" width="142" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnn-w8-rnC">
+                                <rect key="frame" x="137.5" y="406" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.65039428929999998" blue="0.21215895579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="EEQ-xD-t7O"/>
+                                    <constraint firstAttribute="height" constant="100" id="tsp-YN-Wd6"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="recordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="GhA-Tb-mGR"/>
@@ -39,6 +46,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="evg-Bk-S76" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="22h-Uu-UCe"/>
+                            <constraint firstItem="Jnn-w8-rnC" firstAttribute="top" secondItem="evg-Bk-S76" secondAttribute="bottom" constant="54" id="82T-rY-IiD"/>
+                            <constraint firstItem="Jnn-w8-rnC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M3V-j1-4Ee"/>
+                            <constraint firstItem="evg-Bk-S76" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dNE-DF-dcO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -48,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="93.103448275862078"/>
+            <point key="canvasLocation" x="136.80000000000001" y="92.203898050974516"/>
         </scene>
     </scenes>
 </document>
