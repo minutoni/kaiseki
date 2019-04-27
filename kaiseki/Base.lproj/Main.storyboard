@@ -42,8 +42,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="recordButton" destination="Jnn-w8-rnC" id="MpP-IE-Hlr"/>
-                        <outlet property="textView" destination="evg-Bk-S76" id="a5M-N6-A14"/>
+                        <outlet property="recordButton" destination="Jnn-w8-rnC" id="VBQ-MX-ZRO"/>
+                        <outlet property="textView" destination="evg-Bk-S76" id="snl-5u-sFw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

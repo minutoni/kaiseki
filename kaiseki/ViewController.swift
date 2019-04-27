@@ -101,9 +101,9 @@ class ViewController: UIViewController ,SFSpeechRecognitionTaskDelegate{
         
         let recordingFormat = inputNode.outputFormat(forBus: 0)
         
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat, block: <#T##AVAudioNodeTapBlock##AVAudioNodeTapBlock##(AVAudioPCMBuffer, AVAudioTime) -> Void#>) {(buffer:AVAudioPCMBuffer, when: AVAudioTime) in
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) {(buffer:AVAudioPCMBuffer, when: AVAudioTime) in
             self.recognitionRequest?.append(buffer)
-            )}
+            }
         
         audioEngine.prepare() //オーディオエンジン準備
         try audioEngine.start() //オーディオエンジン開始
